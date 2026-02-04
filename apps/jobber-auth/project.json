@@ -64,14 +64,15 @@
     },
     "test": {
       "options": {
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "dependsOn": ["generate-types"]
       }
     },
     "generate-types": {
       "command": "prisma generate",
       "options": {
         "cwd": "apps/jobber-auth"
-      } 
+      }
     },
     "migrate-prisma": {
       "command": "prisma migrate dev",
